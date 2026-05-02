@@ -46,35 +46,6 @@ This project follows the **CRISP-DM** framework:
 
 ---
 
-## Repository Structure
-
-```
-hr_attrition_project/
-├── README.md                       <- this file
-├── requirements.txt                <- Python dependencies
-├── .gitignore                      <- files to ignore in git
-├── data/
-│   └── WA_Fn-UseC_-HR-Employee-Attrition.csv   <- raw dataset
-├── notebooks/
-│   └── hr_attrition_analysis.ipynb <- main analysis notebook
-├── models/
-│   └── final_attrition_pipeline.pkl <- saved sklearn pipeline
-└── images/
-    ├── 01_attrition_distribution.png
-    ├── 02a_age_by_attrition.png
-    ├── 02b_income_by_attrition.png
-    ├── 02c_yearsatcompany_by_attrition.png
-    ├── 02d_jobsatisfaction_by_attrition.png
-    ├── 03a_overtime_attrition.png
-    ├── 03b_businesstravel_attrition.png
-    ├── 03c_jobrole_attrition.png
-    ├── 03d_maritalstatus_attrition.png
-    ├── 04_correlation_heatmap.png
-    ├── 05_baseline_model_comparison.png
-    ├── 06_confusion_matrix.png
-    ├── 07_roc_curves_all_models.png
-    └── 08_feature_importance.png
-```
 
 ---
 
@@ -93,7 +64,7 @@ hr_attrition_project/
 To use the dataset:
 
 1. The CSV file is included in the `data/` folder. No download needed.
-2. To run the analysis, open `notebooks/hr_attrition_analysis.ipynb` in Jupyter.
+2. To run the analysis, open `hr_attrition_analysis.ipynb` in Jupyter.
 3. To use the trained pipeline on new data, load the pickle file:
 
 ```python
@@ -114,41 +85,7 @@ predictions = pipeline.predict(new_data)
 probabilities = pipeline.predict_proba(new_data)[:, 1]
 ```
 
----
 
-## How to Run This Project
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/<your-username>/hr_attrition_project.git
-cd hr_attrition_project
-```
-
-### 2. Set up a virtual environment (recommended)
-
-```bash
-python -m venv venv
-source venv/bin/activate   # on Mac/Linux
-# OR
-venv\Scripts\activate      # on Windows
-```
-
-### 3. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the notebook
-
-```bash
-jupyter notebook notebooks/hr_attrition_analysis.ipynb
-```
-
-Then run all cells (Cell -> Run All).
-
----
 
 ## Key Findings
 
@@ -193,9 +130,3 @@ The model identified some clear patterns:
 - Jupyter Notebook
 
 ---
-
-## License
-
-This project is for educational purposes.
-
-The IBM HR Analytics dataset is publicly available from Kaggle and originally distributed by IBM.
